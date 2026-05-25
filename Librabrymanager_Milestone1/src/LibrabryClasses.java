@@ -146,6 +146,31 @@ class BorrowManager {
 
         System.out.println("Student not found!");
     }
+     public void showAllBorrow(){
+    for(int i=0; i<count;i++){
+        list[i].showInfo();
+        System.out.println("---------");
+    }
+}
+
+    public int getCount() {
+        return count;
+    }
+    public void viewBorrowHistory(String studentName){
+        boolean found = false;
+        System.out.println("\n===== Borrow History");
+        for(int i=0; i<count ;i++){
+            if(list[i].getStudentName()
+                    .equalsIgnoreCase(studentName)){
+                list[i].showInfo();
+                System.out.println("---------");
+                found = true;
+            }
+        }
+        if(!found){
+            System.out.println("Np borrowing history found!");
+        }
+    }
 }
 class Report {
     public void generateBorrowReport(ArrayList<Sach> danhSachSach) {
