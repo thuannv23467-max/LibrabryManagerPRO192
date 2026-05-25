@@ -127,11 +127,13 @@ class BorrowManager {
     int count = 0;
 
     public void addBorrow(Borrow b) {
-
+if(int i=0;i<count;i++){
         list[count] = b;
         count++;
+    }else{
+    system.out.println("Borrow list is full");
+}
     }
-
     public void searchBorrow(String studentName) {
 
         for (int i = 0; i < count; i++) {
